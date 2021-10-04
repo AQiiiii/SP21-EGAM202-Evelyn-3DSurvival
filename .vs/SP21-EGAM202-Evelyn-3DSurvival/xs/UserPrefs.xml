@@ -1,13 +1,29 @@
-﻿<Properties>
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/scripts/AvatarController.cs">
+﻿<Properties StartupConfiguration="{EA16E563-5702-99CB-FB51-7A0DDF17870B}|">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/scripts/Item.cs">
     <Files>
-      <File FileName="Assets/scripts/AvatarController.cs" Line="28" Column="1" />
-      <File FileName="Assets/scripts/MouseBox.cs" Line="20" Column="54" />
+      <File FileName="Assets/scripts/AvatarController.cs" Line="12" Column="12" />
+      <File FileName="Assets/scripts/corn.cs" Line="92" Column="10" />
+      <File FileName="Assets/scripts/sheepbrain.cs" Line="98" Column="19" />
+      <File FileName="Assets/scripts/Item.cs" Line="7" Column="15" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
         <State name="__root__">
-          <Node name="SP21-EGAM202-Evelyn-3DSurvival" expanded="True" selected="True" />
+          <Node name="SP21-EGAM202-Evelyn-3DSurvival" expanded="True">
+            <Node name="Assets" expanded="True">
+              <Node name="scripts" expanded="True">
+                <Node name="Item.cs" selected="True" />
+              </Node>
+            </Node>
+          </Node>
+        </State>
+      </Pad>
+      <Pad Id="MonoDevelop.Debugger.WatchPad">
+        <State />
+      </Pad>
+      <Pad Id="MonoDevelop.UnitTesting.TestPad">
+        <State name="__root__">
+          <Node name="Unity" expanded="True" selected="True" />
         </State>
       </Pad>
     </Pads>
