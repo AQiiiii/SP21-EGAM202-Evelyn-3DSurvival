@@ -57,6 +57,8 @@
     <Compile Include="Assets/scripts/corn.cs" />
     <Compile Include="Assets/scripts/sheepbrain.cs" />
     <Compile Include="Assets/scripts/Item.cs" />
+    <Compile Include="Assets/scripts/apple.cs" />
+    <Compile Include="Assets/scripts/Scythe.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="UnityEngine">

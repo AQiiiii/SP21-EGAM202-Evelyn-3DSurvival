@@ -42,55 +42,61 @@ public class AvatarController : MonoBehaviour
                 Collider[] overlappingItems;
                 overlappingItems = Physics.OverlapBox(transform.position + 2 * Vector3.forward, 3 * Vector3.one, Quaternion.identity, LayerMask.GetMask("Item"));
 
-                if(ItemInHands != null)
+                if (overlappingItems.Length == 0)
+                    Debug.Log("There are no items in front of you");
+                else
                 {
-                    ItemInHands.transform.SetParent(null);
-                    ItemInHands = null;
+                    if (ItemInHands != null)
+                    {
+                        ItemInHands.transform.SetParent(null);
+                        ItemInHands = null;
+                    }
+                    ItemInHands = overlappingItems[0].GetComponent<Item>();
+                    ItemInHands.transform.SetParent(gameObject.transform);
+                    ItemInHands.transform.localPosition = new Vector3(0, 1, 1);
+                    Debug.Log("You picked up a" + ItemInHands.name);
                 }
-                ItemInHands = overlappingItems[0].GetComponent<Item>();
-                ItemInHands.transform.SetParent(gameObject.transform);
-                ItemInHands.transform.localPosition = new Vector3(0, 1, 1);
-                Debug.Log("You picked up a" + ItemInHands.name);
+               
             }
 
-            if(Input.GetKeyDown(KeyCode.D))
+           
+        }
+        if (Input.GetKeyDown(KeyCode.D))
+        {
+            if (ItemInHands != null)
             {
-                if (ItemInHands != null)
-                {
-                    ItemInHands.transform.SetParent(null);
-                    Debug.Log("You dropped the" + ItemInHands.name);
-                    ItemInHands = null;
-                }
-                else
-                    Debug.Log("You can't drop an item, because you're not holding");
-
+                ItemInHands.transform.SetParent(null);
+                Debug.Log("You dropped the" + ItemInHands.name);
+                ItemInHands = null;
             }
+            else
+                Debug.Log("You can't drop an item, because you're not holding");
 
-            if(Input.GetKeyDown(KeyCode.Space))
-            {
-                if (ItemInHands != null)
-                    ItemInHands.GetComponent<Item>().Wear();
-                else
-                    Debug.Log("You can't use an item, because you're not holding anything.");
-            }
-
-            if(Input.GetKeyDown(KeyCode.W))
-            {
-                if (ItemInHands != null)
-                    ItemInHands.GetComponent<Item>().Wear();
-                else
-                    Debug.Log("You can't wear an itm, because you're not holding anything.");
-            }
-
-            if(Input.GetKeyDown(KeyCode.E))
-            {
-                if (ItemInHands != null)
-                    ItemInHands.GetComponent<Item>().Eat();
-                else
-                    Debug.Log("You can't eat am item, because you're not holding anything");
-            }
         }
 
+        if (Input.GetKeyDown(KeyCode.Space))
+        {
+            if (ItemInHands != null)
+                ItemInHands.GetComponent<Item>().Use();
+            else
+                Debug.Log("You can't use an item, because you're not holding anything.");
+        }
+
+        if (Input.GetKeyDown(KeyCode.W))
+        {
+            if (ItemInHands != null)
+                ItemInHands.GetComponent<Item>().Wear();
+            else
+                Debug.Log("You can't wear an itm, because you're not holding anything.");
+        }
+
+        if (Input.GetKeyDown(KeyCode.E))
+        {
+            if (ItemInHands != null)
+                ItemInHands.GetComponent<Item>().Eat();
+            else
+                Debug.Log("You can't eat am item, because you're not holding anything");
+        }
 
     }
 }

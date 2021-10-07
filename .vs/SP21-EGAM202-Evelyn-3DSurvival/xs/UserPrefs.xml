@@ -1,21 +1,17 @@
 ﻿<Properties StartupConfiguration="{EA16E563-5702-99CB-FB51-7A0DDF17870B}|">
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/scripts/Item.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/scripts/Scythe.cs">
     <Files>
-      <File FileName="Assets/scripts/AvatarController.cs" Line="12" Column="12" />
+      <File FileName="Assets/scripts/AvatarController.cs" Line="99" Column="10" IsPinned="True" />
       <File FileName="Assets/scripts/corn.cs" Line="92" Column="10" />
       <File FileName="Assets/scripts/sheepbrain.cs" Line="98" Column="19" />
-      <File FileName="Assets/scripts/Item.cs" Line="7" Column="15" />
+      <File FileName="Assets/scripts/Item.cs" Line="19" Column="72" />
+      <File FileName="Assets/scripts/apple.cs" Line="12" Column="1" />
+      <File FileName="Assets/scripts/Scythe.cs" Line="1" Column="1" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
         <State name="__root__">
-          <Node name="SP21-EGAM202-Evelyn-3DSurvival" expanded="True">
-            <Node name="Assets" expanded="True">
-              <Node name="scripts" expanded="True">
-                <Node name="Item.cs" selected="True" />
-              </Node>
-            </Node>
-          </Node>
+          <Node name="SP21-EGAM202-Evelyn-3DSurvival" expanded="True" />
         </State>
       </Pad>
       <Pad Id="MonoDevelop.Debugger.WatchPad">
