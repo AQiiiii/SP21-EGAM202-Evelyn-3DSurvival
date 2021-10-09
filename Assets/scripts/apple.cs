@@ -6,6 +6,9 @@ public class apple : Item
 {
     public override void Eat()
     {
-        transform.parent.transform.localScale = new Vector3(3, 3, 3);
+        transform.parent.transform.localScale = new Vector3(5, 5, 5);
+        Debug.Log("You eat the apple");
+        transform.parent.GetComponent<AvatarController>().ItemInHands = null;
+        Destroy(this.gameObject);
     }
 }
