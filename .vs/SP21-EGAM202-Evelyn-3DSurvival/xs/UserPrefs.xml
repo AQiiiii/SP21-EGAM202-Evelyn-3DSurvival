@@ -1,20 +1,18 @@
 ﻿<Properties StartupConfiguration="{EA16E563-5702-99CB-FB51-7A0DDF17870B}|">
-  <MonoDevelop.Ide.Workbench ActiveDocument="Temp/Compiled-Unlit-Transparent.shader">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/scripts/AvatarController.cs">
     <Files>
-      <File FileName="Assets/scripts/AvatarController.cs" IsPinned="True" />
+      <File FileName="Assets/scripts/AvatarController.cs" Line="13" Column="31" IsPinned="True" />
       <File FileName="Assets/scripts/camera.cs" Line="1" Column="1" />
-      <File FileName="Assets/scripts/corn.cs" />
-      <File FileName="Assets/scripts/sheepbrain.cs" />
-      <File FileName="Assets/scripts/Item.cs" />
+      <File FileName="Assets/scripts/corn.cs" Line="1" Column="1" />
+      <File FileName="Assets/scripts/sheepbrain.cs" Line="1" Column="1" />
+      <File FileName="Assets/scripts/Item.cs" Line="1" Column="1" />
       <File FileName="Assets/scripts/apple.cs" Line="14" Column="2" />
-      <File FileName="Assets/scripts/Scythe.cs" />
-      <File FileName="Temp/Compiled-Standard.shader" Line="13" Column="44" />
-      <File FileName="Temp/Compiled-Unlit-Transparent.shader" Line="25" Column="64" />
+      <File FileName="Assets/scripts/Scythe.cs" Line="15" Column="39" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.ItemProperties.Assembly-CSharp PreferredExecutionTarget="abd39935-f180-4c73-a209-ec1a6c671807" />
+  <MonoDevelop.Ide.ItemProperties.Assembly-CSharp PreferredExecutionTarget="7ceb62cb-6f09-4fd1-9b4a-8096376652ec" />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore />
   </MonoDevelop.Ide.DebuggingService.Breakpoints>

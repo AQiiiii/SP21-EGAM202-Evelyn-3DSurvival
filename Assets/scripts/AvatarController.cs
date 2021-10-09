@@ -10,6 +10,7 @@ public class AvatarController : MonoBehaviour
     public enum MovementStateT { StandStill, Walking}
     public MovementStateT currentState;
     public Item ItemInHands, ItemOnHead;
+    public GameObject thedoor;
 
     private void Start()
     {
@@ -96,6 +97,17 @@ public class AvatarController : MonoBehaviour
                 ItemInHands.GetComponent<Item>().Eat();
             else
                 Debug.Log("You can't eat am item, because you're not holding anything");
+        }
+
+    }
+
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.gameObject.layer == LayerMask.NameToLayer("switch"))
+        {
+            Destroy(thedoor.gameObject);
+            Debug.Log("door");
+
         }
 
     }

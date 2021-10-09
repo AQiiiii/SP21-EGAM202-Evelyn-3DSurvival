@@ -11,7 +11,8 @@ public class Scythe : Item
 
     private void OnTriggerEnter(Collider other)
     {
-
+        if (other.gameObject.layer == LayerMask.NameToLayer("CornPlant"))
+            Destroy(other.gameObject);
     }
 
 }
