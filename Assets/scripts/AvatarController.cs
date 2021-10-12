@@ -10,7 +10,8 @@ public class AvatarController : MonoBehaviour
     public enum MovementStateT { StandStill, Walking}
     public MovementStateT currentState;
     public Item ItemInHands, ItemOnHead;
-    public GameObject thedoor;
+    public GameObject thedoorswitch;
+    public GameObject door;
 
     private void Start()
     {
@@ -21,6 +22,7 @@ public class AvatarController : MonoBehaviour
 
     void Update()
     {
+
         Ray rayFromCameraToMouse;
         RaycastHit closetClickableGroundOnRay;
 
@@ -55,8 +57,16 @@ public class AvatarController : MonoBehaviour
                     ItemInHands = overlappingItems[0].GetComponent<Item>();
                     ItemInHands.transform.SetParent(gameObject.transform);
                     ItemInHands.transform.localPosition = new Vector3(0, 1, 1);
+                    if (ItemInHands.name == "thedoorswitch")
+                    {
+                        door.SetActive(false);
+                        Debug.Log("door open");
+                    }
                     Debug.Log("You picked up a" + ItemInHands.name);
+                    
                 }
+                
+                
                
             }
 
@@ -67,6 +77,11 @@ public class AvatarController : MonoBehaviour
             if (ItemInHands != null)
             {
                 ItemInHands.transform.SetParent(null);
+                if (ItemInHands.name == "thedoorswitch")
+                {
+                    door.SetActive(true);
+                    Debug.Log("door close");
+                }
                 Debug.Log("You dropped the" + ItemInHands.name);
                 ItemInHands = null;
             }
@@ -99,16 +114,9 @@ public class AvatarController : MonoBehaviour
                 Debug.Log("You can't eat am item, because you're not holding anything");
         }
 
-    }
-
-    private void OnTriggerEnter(Collider other)
-    {
-        if (other.gameObject.layer == LayerMask.NameToLayer("switch"))
-        {
-            Destroy(thedoor.gameObject);
-            Debug.Log("door");
-
-        }
+       
 
     }
+
+    
 }
